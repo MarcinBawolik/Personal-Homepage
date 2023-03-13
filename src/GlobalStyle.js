@@ -15,10 +15,8 @@ body {
 }
 `;
 export const Wrapper = styled.div`
-position: relative;
-width: 1920px;
-height: 2668px;
 background-color: ${({ theme }) => theme.color.whitelilac};
+max-width: 1920px;
 padding-top: 100px;
 margin: auto;
 `;

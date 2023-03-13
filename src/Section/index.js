@@ -48,7 +48,7 @@ export const Section = ({ title }) => (
 )
 
 export const ShortSection = ({ title }) => (
-    <StyledSection short>
+    <StyledSection>
         <SectionHeader>{title}</SectionHeader>
         <SectionDivider />
         <SectionSkillWrapper>

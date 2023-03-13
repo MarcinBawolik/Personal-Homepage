@@ -1,16 +1,11 @@
 import styled, { css } from "styled-components";
 
 export const Wrapper = styled.div`
-position: absolute;
-width: 691px;
-height: 282px;
-margin-top: 1684px;
-margin-left: 352px;
-margin-bottom: 80px;
+max-width: 691px;
+margin: 120px auto 109px auto;
 `;
 
 export const Paragraph = styled.p`
-
 ${(props) => props.talk && css`
 color: ${({ theme }) => theme.color.slategray};
 font-weight: 700;
@@ -25,10 +20,9 @@ ${(props) => props.content && css`
 color: ${({ theme }) => theme.color.black};
 font-weight: 400;
 font-size: 18px;
-line-height: 140%;
-letter-spacing: 0.05em;
 `};
 `;
+
 export const Image = styled.img`
 width: 47.91px;
 height: 47.53px;
