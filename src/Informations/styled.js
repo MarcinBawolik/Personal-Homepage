@@ -1,6 +1,7 @@
 import styled, {css} from "styled-components";
 import me from "../images/me.jpg"
 import button from "../images/button.png"
+import togglemode from "../images/togglemode.png"
 
 export const Wrapper = styled.div`
 display: grid;
@@ -19,7 +20,13 @@ max-width: 633px;
 margin-left: 66px;
 `;
 export const Paragraph = styled.p`
-
+clear: both;
+${(props)  => props.toggle && css`
+width: 159px;
+height: 26px;
+background-image: url("${togglemode}");
+float:right;
+`}
 ${(props) => props.this && css`
 color: ${({ theme }) => theme.color.slategray};
 font-weight: 700;
