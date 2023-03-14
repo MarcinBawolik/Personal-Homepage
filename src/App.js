@@ -2,7 +2,7 @@ import { Contact } from "./Contact";
 import { Wrapper } from "./GlobalStyle";
 import Informations from "./Informations";
 import { Section, ShortSection } from "./Section";
-import { Tiles } from "./Tile";
+import { Tiles } from "./GitHubProjects/Tile";
 function App() {
   return (
 <>
