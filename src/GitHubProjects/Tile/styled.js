@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import shape from "../images/shape.png";
+import shape from "../../images/shape.png";
 
 export const Wrapper = styled.div`
   max-width: 1216px;
@@ -44,6 +44,10 @@ export const TileWrapper = styled.div`
   grid-template-rows: 1fr 1fr;
   ${(props) => props.loading && css``}
   ${(props) => props.error && css``}
+  @media (max-width: ${({ theme }) => theme.breakpoint.iPhoneSE}px)
+{
+    grid-template-columns: 1fr;
+}
 `;
 export const Tile = styled.div`
   background-color: ${({ theme }) => theme.color.white};
@@ -75,31 +79,4 @@ color: ${({ theme }) => theme.color.slategray}
 font-weight: 400;
 font-size: 18px;
 `}
-`;
-
-export const GitHubProjectsLink = styled.a`
-  color: ${({ theme }) => theme.color.scienceblue};
-  text-decoration-skip-ink: none;
-`;
-export const Spinner = styled.div`
-  border: 16px solid ${({ theme }) => theme.color.iron};
-  border-top: 16px solid ${({ theme }) => theme.color.scienceblue};
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  animation: spin 2s linear infinite;
-
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-`;
-
-export const DangerImage = styled.img`
-  width: 37px;
-  height: 33.34px;
 `;
