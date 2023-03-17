@@ -3,6 +3,10 @@ import styled, { css } from "styled-components";
 export const Wrapper = styled.div`
   max-width: 1216px;
   margin: 0px auto;
+  @media (max-width: ${({ theme }) => theme.breakpoint.iPhoneSE}px) {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
   `;
 
 export const Paragraph = styled.p`
@@ -19,6 +23,10 @@ export const Paragraph = styled.p`
       color: ${({ theme }) => theme.color.black};
       font-weight: 900;
       font-size: 32px;
+      transition: color 0.5s ease-in-out;
+      &:hover{
+        color: ${({ theme }) => theme.color.scienceblue}
+      }
       @media (max-width: ${({ theme }) => theme.breakpoint.iPhoneSE}px)
 {
     font-size: 20px;
