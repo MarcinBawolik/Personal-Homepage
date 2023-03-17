@@ -4,6 +4,10 @@ import shape from "../../images/shape.png";
 export const Wrapper = styled.div`
   max-width: 1216px;
   margin: 0px auto 120px auto;
+  @media (max-width: ${({ theme }) => theme.breakpoint.iPhoneSE}px) {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
 `;
 export const HeaderWrapper = styled.div`
   display: grid;
@@ -42,20 +46,19 @@ export const TileWrapper = styled.div`
   grid-gap: 32px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  ${(props) => props.loading && css``}
-  ${(props) => props.error && css``}
-  @media (max-width: ${({ theme }) => theme.breakpoint.iPhoneSE}px)
-{
-    grid-template-columns: 1fr;
-}
+  @media (max-width: ${({ theme }) => theme.breakpoint.iPhoneSE}px) {
+    grid-template-columns: 1fr; 
+  }
 `;
 export const Tile = styled.div`
   background-color: ${({ theme }) => theme.color.white};
   border-radius: 4px;
-  border: 6px solid rgba(209, 213, 218, 0.3);
-  box-shadow: 0px -2px 50px rgba(9, 10, 51, 0.02),
-    0px 16px 58px rgba(9, 10, 51, 0.03);
+  border: 6px solid ${({ theme }) => theme.color.mercury};
   padding: 56px;
+  transition: border 0.5s ease-in-out;
+  &:hover{
+    border: 6px solid ${({ theme }) => theme.color.mischka};
+  }
 `;
 export const TileParagraph = styled.p`
   ${(props) =>
