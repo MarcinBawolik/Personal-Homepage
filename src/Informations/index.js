@@ -1,8 +1,9 @@
 import { Wrapper, Image, ParagraphWrapper, Paragraph } from "./styled";
+import me from "../images/me.jpg"
 
 const Informations = () => (
   <Wrapper>
-    <Image />
+    <Image src={me} alt=""/>
     <ParagraphWrapper>
       <Paragraph toggle></Paragraph>
       <Paragraph this>This is</Paragraph>

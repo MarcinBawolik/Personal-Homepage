@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import me from "../images/me.jpg";
 import button from "../images/button.png";
 import togglemode from "../images/togglemode.png";
 
@@ -8,25 +7,25 @@ export const Wrapper = styled.div`
   grid-template-columns: auto 1fr;
   margin: 0px auto;
   max-width: 1216px;
-  @media (max-width: ${({ theme }) => theme.breakpoint.iPhoneSE}px)
-{
+  @media (max-width: ${({ theme }) => theme.breakpoint.iPhoneSE}px) {
     grid-template-columns: 1fr;
-}
+  }
 `;
-export const Image = styled.div`
-  width: 398px;
-  height: 398px;
+export const Image = styled.img`
   border-radius: 50%;
-  background-image: url("${me}");
-  @media (max-width: ${({ theme }) => theme.breakpoint.iPhoneSE}px)
-{
-    width: 200px;
-    height: 200px;
-}
+  @media (max-width: ${({ theme }) => theme.breakpoint.iPhoneSE}px) {
+    margin-left: 16px;
+    width: 132.67px;
+    height: 132.67px;
+  }
 `;
 export const ParagraphWrapper = styled.div`
   max-width: 633px;
   margin-left: 66px;
+  @media (max-width: ${({ theme }) => theme.breakpoint.iPhoneSE}px) {
+    margin-left: 16px;
+    margin-right: 29px;
+  }
 `;
 export const Paragraph = styled.p`
   clear: both;
@@ -37,6 +36,12 @@ export const Paragraph = styled.p`
       height: 26px;
       background-image: url("${togglemode}");
       float: right;
+      @media (max-width: ${({ theme }) => theme.breakpoint.iPhoneSE}px) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: 16px;
+      }
     `}
   ${(props) =>
     props.this &&
