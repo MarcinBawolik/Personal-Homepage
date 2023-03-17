@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const StyledSection = styled.section`
   background-color: ${({ theme }) => theme.color.white};
@@ -7,6 +7,10 @@ export const StyledSection = styled.section`
   margin: 72px auto;
   box-shadow: 0px -2px 50px rgba(9, 10, 51, 0.02),
     0px 16px 58px rgba(9, 10, 51, 0.03);
+  @media (max-width: ${({ theme }) => theme.breakpoint.iPhoneSE}px) {
+    margin-left: 14px;
+    margin-right: 14px;
+  }
 `;
 
 export const SectionHeader = styled.h2`
@@ -14,10 +18,7 @@ export const SectionHeader = styled.h2`
   font-weight: 900;
   font-size: 30px;
   text-align: left;
-  margin: 0 auto;
-  &:hover {
-    text-decoration: underline ${({ theme }) => theme.color.dodgerblue};
-  }
+  margin-left: 16px;
 `;
 
 export const SectionDivider = styled.div`
@@ -25,8 +26,9 @@ export const SectionDivider = styled.div`
   margin: 18px auto 32px auto;
   max-width: 1151px;
   height: 1px;
-  &:hover {
-    border: 1px solid ${({ theme }) => theme.color.dodgerblue};
+  @media (max-width: ${({ theme }) => theme.breakpoint.iPhoneSE}px) {
+    margin-left: 16px;
+    margin-right: 16px;
   }
 `;
 
@@ -36,16 +38,37 @@ export const SectionSkillWrapper = styled.div`
   padding: 0px;
   max-width: 1151px;
   margin: 0px auto;
-  @media (max-width: ${({ theme }) => theme.breakpoint.iPhoneSE}px)
-{
+  @media (max-width: ${({ theme }) => theme.breakpoint.iPhoneSE}px) {
     grid-template-columns: 1fr;
-}
+  }
 `;
 
 export const SectionList = styled.ul`
   color: ${({ theme }) => theme.color.dodgerblue};
   margin-left: 0px;
   list-style: none;
+  ${(props) =>
+    props.top &&
+    css`
+      @media (max-width: ${({ theme }) => theme.breakpoint.iPhoneSE}px) {
+        margin-bottom: 0px;
+      }
+    `};
+  ${(props) =>
+    props.middle &&
+    css`
+      @media (max-width: ${({ theme }) => theme.breakpoint.iPhoneSE}px) {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+    `};
+  ${(props) =>
+    props.bottom &&
+    css`
+      @media (max-width: ${({ theme }) => theme.breakpoint.iPhoneSE}px) {
+        margin-top: 0px;
+      }
+    `};
 `;
 
 export const SectionListItem = styled.li`
@@ -53,24 +76,17 @@ export const SectionListItem = styled.li`
   font-size: 18px;
   font-weight: 400;
   line-height: 140%;
-  &:hover {
-    text-decoration: underline ${({ theme }) => theme.color.dodgerblue};
-  }
 `;
 
 export const LiWrapper = styled.div`
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
 `;
 
 export const LiBullet = styled.div`
-    width: 9px;
-    height: 9px;
-    border-radius: 4.5px;
-    background-color: ${({ theme }) => theme.color.scienceblue};
-    margin-right: 16px;
-
-    &:hover{
-      filter: brightness(120%);
-    }
+  width: 9px;
+  height: 9px;
+  border-radius: 4.5px;
+  background-color: ${({ theme }) => theme.color.scienceblue};
+  margin-right: 16px;
 `;

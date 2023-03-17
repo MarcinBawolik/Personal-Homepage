@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
-import button from "../images/button.png";
-import togglemode from "../images/togglemode.png";
+import hireMeButton from "../images/hireMeButton.svg";
+import sun from "../images/sun.svg";
 
 export const Wrapper = styled.div`
   display: grid;
@@ -27,48 +27,63 @@ export const ParagraphWrapper = styled.div`
     margin-right: 29px;
   }
 `;
-export const Paragraph = styled.p`
-  clear: both;
+export const Header = styled.h1`
+  color: ${({ theme }) => theme.color.mineshaft};
+  font-weight: 900;
+  font-size: 38px;
+  margin-top: 12px;
+  margin-bottom: 35px;
+`;
+export const Discription = styled.span`
+  color: ${({ theme }) => theme.color.slategray};
+  font-weight: 400;
+  font-size: 20px;
+`;
+export const ThisIs = styled.span`
+  color: ${({ theme }) => theme.color.slategray};
+  font-weight: 700;
+  font-size: 12px;
+`;
+export const HireButton = styled.button`
+  width: 154px;
+  height: 49px;
+  background-image: url("${hireMeButton}");
+  border: none;
+  display: block;
+  margin-top: 32px;
+`;
+export const ToggleButtonWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`;
+export const ToggleButton = styled.button`
+  display: flex;
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+`;
+export const Text = styled.span`
+  color: ${({ theme }) => theme.color.slategray};
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-right: 15px;
+`;
+export const IconBox = styled.div`
+  width: 28px;
+  background-color: ${({ theme }) => theme.color.slategray};
+  border-radius: 4px;
+`;
+export const SunIcon = styled.div`
+  background-image: url(${sun});
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  transition: transform 0.3s ease-in-out;
   ${(props) =>
-    props.toggle &&
+    props.isClicked &&
     css`
-      width: 159px;
-      height: 26px;
-      background-image: url("${togglemode}");
-      float: right;
-      @media (max-width: ${({ theme }) => theme.breakpoint.iPhoneSE}px) {
-        position: absolute;
-        top: 0;
-        right: 0;
-        margin-right: 16px;
-      }
-    `}
-  ${(props) =>
-    props.this &&
-    css`
-      color: ${({ theme }) => theme.color.slategray};
-      font-weight: 700;
-      font-size: 12px;
-    `}
-${(props) =>
-    props.name &&
-    css`
-      color: ${({ theme }) => theme.color.mineshaft};
-      font-weight: 900;
-      font-size: 38px;
-    `}
-${(props) =>
-    props.discription &&
-    css`
-      color: ${({ theme }) => theme.color.slategray};
-      font-weight: 400;
-      font-size: 20px;
-    `}
-${(props) =>
-    props.hire &&
-    css`
-      width: 154px;
-      height: 49px;
-      background-image: url("${button}");
+      transform: translateX(13px);
     `}
 `;
