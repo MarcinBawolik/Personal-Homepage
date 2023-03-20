@@ -1,19 +1,21 @@
-import { Contact } from "./Contact";
-import { Wrapper } from "./GlobalStyle";
-import Informations from "./Informations";
-import { Section, ShortSection } from "./Section";
-import { Tiles } from "./GitHubProjects/Tile";
+import PersonalHomepage from "./PersonalHomepage";
+import { useSelector } from "react-redux";
+import { selectDarkThemeOn } from "./Theme/slice";
+import { ThemeProvider } from "styled-components";
+import { GlobalStyle } from "./GlobalStyle";
+import { Provider } from "react-redux";
+import store from "./store";
+import { themeLight, themeDark } from "./Theme/theme";
 
-function App() {
-  return (
-    <Wrapper>
-      <Informations />
-      <Section title="My skillset includes 🛠️" />
-      <ShortSection title="What i want to learn next 🚀" />
-      <Tiles />
-      <Contact />
-    </Wrapper>
-  );
+export const App = () => {
+    const darkThemeOn = useSelector(selectDarkThemeOn);
+
+    return (
+        <ThemeProvider theme={darkThemeOn ? themeDark : themeLight}>
+            <GlobalStyle />
+            <Provider store={store}>
+                <PersonalHomepage />
+            </Provider>
+        </ThemeProvider>
+    )
 }
-
-export default App;
