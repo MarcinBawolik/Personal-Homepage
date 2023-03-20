@@ -82,7 +82,7 @@ export const SunIcon = styled.div`
   border-radius: 4px;
   transition: transform 0.3s ease-in-out;
   ${(props) =>
-    props.isClicked &&
+    props.darkThemeOn &&
     css`
       transform: translateX(13px);
     `}

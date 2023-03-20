@@ -13,23 +13,22 @@ import {
   ThisIs,
 } from "./styled";
 import me from "../images/me.jpg";
-import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { selectDarkThemeOn, toggleTheme } from "../Theme/slice";
 
 const Informations = () => {
-  const [isClicked, setIsClicked] = useState(false);
+  const darkThemeOn = useSelector(selectDarkThemeOn);
+  const dispatch = useDispatch();
 
-  function handleClick() {
-    setIsClicked(isClicked === false ? true : false);
-  }
   return (
     <Wrapper>
       <Image src={me} alt="" />
       <ParagraphWrapper>
         <ToggleButtonWrapper>
-          <ToggleButton onClick={handleClick}>
-            <Text>Dark Mode {isClicked === true ? "On" : "Off"}</Text>
+          <ToggleButton onClick={() => dispatch(toggleTheme())}>
+            <Text>Dark Mode {darkThemeOn ? "On" : "Off"}</Text>
             <IconBox>
-              <SunIcon isClicked={isClicked} />
+              <SunIcon darkThemeOn={darkThemeOn} />
             </IconBox>
           </ToggleButton>
         </ToggleButtonWrapper>
