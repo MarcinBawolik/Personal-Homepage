@@ -12,6 +12,8 @@ export const Wrapper = styled.div`
   }
 `;
 export const Image = styled.img`
+  width: 30vw;
+  max-width: 384px;
   border-radius: 50%;
   @media (max-width: ${({ theme }) => theme.breakpoint.iPhoneSE}px) {
     margin-left: 16px;
