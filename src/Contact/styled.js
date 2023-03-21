@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { themeLight } from "../Theme/theme";
 
 export const Wrapper = styled.div`
   max-width: 1216px;
@@ -7,35 +8,37 @@ export const Wrapper = styled.div`
     margin-left: 16px;
     margin-right: 16px;
   }
-  `;
+`;
 
 export const Paragraph = styled.p`
   ${(props) =>
     props.talk &&
     css`
-      color: ${({ theme }) => theme.color.slategray};
+      color: ${({ theme }) =>
+        theme === themeLight ? theme.color.slategray : theme.color.white};
       font-weight: 700;
       font-size: 12px;
     `};
   ${(props) =>
     props.email &&
     css`
-      color: ${({ theme }) => theme.color.black};
+      color: ${({ theme }) =>
+        theme === themeLight ? theme.color.black : theme.color.white};
       font-weight: 900;
       font-size: 32px;
       transition: color 0.5s ease-in-out;
-      &:hover{
-        color: ${({ theme }) => theme.color.scienceblue}
+      &:hover {
+        color: ${({ theme }) => theme.color.scienceblue};
       }
-      @media (max-width: ${({ theme }) => theme.breakpoint.iPhoneSE}px)
-{
-    font-size: 20px;
-}
+      @media (max-width: ${({ theme }) => theme.breakpoint.iPhoneSE}px) {
+        font-size: 20px;
+      }
     `};
   ${(props) =>
     props.content &&
     css`
-      color: ${({ theme }) => theme.color.black};
+      color: ${({ theme }) =>
+        theme === themeLight ? theme.color.black : theme.color.white};
       font-weight: 400;
       font-size: 18px;
       max-width: 691px;

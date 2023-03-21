@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import shape from "../../images/shape.png";
+import { themeLight } from "../../Theme/theme";
 
 export const Wrapper = styled.div`
   max-width: 1216px;
@@ -26,7 +27,8 @@ export const HeaderParagraph = styled.p`
   ${(props) =>
     props.title &&
     css`
-      color: ${({ theme }) => theme.color.black};
+      color: ${({ theme }) =>
+        theme === themeLight ? theme.color.black : theme.color.white};
       font-weight: 900;
       font-size: 30px;
       margin: 12.99px auto 8px auto;
@@ -34,11 +36,12 @@ export const HeaderParagraph = styled.p`
 ${(props) =>
     props.subtitle &&
     css`
-color: ${({ theme }) => theme.color.mineshaft}
-font-weight: 400;
-font-size: 20px;
-margin: 0px auto 24px auto;
-`}
+      color: ${({ theme }) =>
+        theme === themeLight ? theme.color.mineshaft : theme.color.white};
+      font-weight: 400;
+      font-size: 20px;
+      margin: 0px auto 24px auto;
+    `}
 `;
 export const TileWrapper = styled.div`
   max-width: 1216px;
@@ -47,38 +50,46 @@ export const TileWrapper = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   @media (max-width: ${({ theme }) => theme.breakpoint.iPhoneSE}px) {
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
   }
 `;
 export const Tile = styled.div`
-  background-color: ${({ theme }) => theme.color.white};
+  background-color: ${({ theme }) =>
+    theme === themeLight ? theme.color.white : theme.color.semidark};
   border-radius: 4px;
-  border: 6px solid ${({ theme }) => theme.color.mercury};
+  border: 6px solid
+    ${({ theme }) =>
+      theme === themeLight ? theme.color.mercury : theme.color.shuttlegray};
   padding: 56px;
   transition: border 0.5s ease-in-out;
-  &:hover{
-    border: 6px solid ${({ theme }) => theme.color.mischka};
+  &:hover {
+    border: 6px solid
+      ${({ theme }) =>
+        theme === themeLight ? theme.color.mischka : theme.color.slategray};
   }
 `;
 export const TileParagraph = styled.p`
   ${(props) =>
     props.header &&
     css`
-      color: ${({ theme }) => theme.color.scienceblue};
+      color: ${({ theme }) =>
+        theme === themeLight ? theme.color.scienceblue : theme.color.white};
       font-weight: 700;
       font-size: 24px;
     `}
   ${(props) =>
     props.content &&
     css`
-      color: ${({ theme }) => theme.color.slategray};
+      color: ${({ theme }) =>
+        theme === themeLight ? theme.color.slategray : theme.color.white};
       font-weight: 400;
       font-size: 18px;
     `}
 ${(props) =>
     props.link &&
     css`
-color: ${({ theme }) => theme.color.slategray}
+color: ${({ theme }) =>
+      theme === themeLight ? theme.color.scienceblue : theme.color.white}
 font-weight: 400;
 font-size: 18px;
 `}
