@@ -2,11 +2,11 @@ import { Contact } from "./Contact";
 import { Wrapper } from "./GlobalStyle";
 import Informations from "./Informations";
 import { Section, ShortSection } from "./Section";
-import { Tiles } from "./GitHubProjects/Tile";
+import { Tiles } from "./Tile";
 
 function PersonalHomepage() {
   return (
-<Wrapper>
+    <Wrapper>
       <Informations />
       <Section title="My skillset includes 🛠️" />
       <ShortSection title="What i want to learn next 🚀" />
