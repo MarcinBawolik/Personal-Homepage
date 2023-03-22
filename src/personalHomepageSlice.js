@@ -13,7 +13,7 @@ const personalHomepageSlice = createSlice({
     }),
     fetchProjectsSucces: (_, { payload: projects }) => ({
       projects,
-      status: "succes",
+      status: "success",
     }),
     fetchProjectsError: () => ({
       projects: null,
