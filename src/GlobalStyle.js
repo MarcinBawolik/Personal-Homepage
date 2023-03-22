@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
+import { themeLight } from "./Theme/theme";
 
 export const GlobalStyle = createGlobalStyle`
 html {
@@ -15,9 +16,10 @@ body {
 }
 `;
 export const Wrapper = styled.div`
-  background-color: ${({ theme }) => theme.color.whitelilac};
+  background-color: ${({ theme }) => (theme === themeLight ? theme.color.whitelilac : theme.color.mineshaft)};
   max-width: 1920px;
   padding-top: 100px;
+  padding-bottom: 100px;
   margin: auto;
   @media (max-width: ${({ theme }) => theme.breakpoint.iPhoneSE}px) {
     padding-top: 20px;
