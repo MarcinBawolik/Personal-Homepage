@@ -6,10 +6,10 @@ import {
 } from "./personalHomepageSlice";
 import { getRepositories } from "./getRepo";
 
-function* fetchRepositoriesHandler({ payload: username }) {
+function* fetchRepositoriesHandler() {
   try {
     yield delay(3000);
-    const repository = yield call(getRepositories, username);
+    const repository = yield call(getRepositories);
     yield put(fetchProjectsSucces(repository));
   } catch (error) {
     yield put(fetchProjectsError());
