@@ -48,5 +48,9 @@ export const Paragraph = styled.p`
 export const Image = styled.img`
   width: 47.91px;
   height: 47.53px;
+`;
+export const ImageWrapper = styled.button`
   margin-right: 24px;
+  background-color: inherit;
+  border: none;
 `;
