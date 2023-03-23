@@ -7,12 +7,15 @@ import {
   IconBox,
   SunIcon,
   ToggleButtonWrapper,
-  HireButton,
   Header,
   Discription,
   ThisIs,
+  HireMe,
+  Envelope,
+  HireMeText,
 } from "./styled";
 import me from "../images/me.jpg";
+import envelope from "../images/envelope.svg"
 import { useDispatch, useSelector } from "react-redux";
 import { selectDarkThemeOn, toggleTheme } from "../Theme/slice";
 
@@ -38,7 +41,7 @@ const Informations = () => {
           🧑🏻💻I am a young, ambitious person. I love challenges, teamwork and
           solving problems. I am currently looking for new job opportunities.
         </Discription>
-        <HireButton />
+        <HireMe><Envelope src={envelope} alt="" /><HireMeText>Hire me</HireMeText></HireMe>
       </ParagraphWrapper>
     </Wrapper>
   );
