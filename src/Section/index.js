@@ -15,7 +15,7 @@ export const Section = ({ title }) => (
       <SectionHeader>{title}</SectionHeader>
       <SectionDivider />
       <SectionSkillWrapper>
-        <SectionList>
+        <SectionList top="true">
           <LiWrapper>
             <LiBullet />
             <SectionLi>Semantic & accessibe HTML</SectionLi>
@@ -44,7 +44,7 @@ export const Section = ({ title }) => (
             <LiBullet /> <SectionLi>CSS Flexbox</SectionLi>
           </LiWrapper>
         </SectionList>
-        <SectionList>
+        <SectionList middle="true">
           <LiWrapper>
             <LiBullet /> <SectionLi>React Router</SectionLi>
           </LiWrapper>
@@ -67,7 +67,7 @@ export const Section = ({ title }) => (
             <LiBullet /> <SectionLi>JavaScript: ES6+</SectionLi>
           </LiWrapper>
         </SectionList>
-        <SectionList>
+        <SectionList bottom="true">
           <LiWrapper>
             <LiBullet /> <SectionLi>Promises, Async/Await</SectionLi>
           </LiWrapper>
@@ -100,7 +100,7 @@ export const ShortSection = ({ title }) => (
     <SectionHeader>{title}</SectionHeader>
     <SectionDivider />
     <SectionSkillWrapper>
-      <SectionList>
+      <SectionList top="true">
         <LiWrapper>
           <LiBullet />
           <SectionLi>React Context</SectionLi>
@@ -110,7 +110,7 @@ export const ShortSection = ({ title }) => (
           <SectionLi>Node.js</SectionLi>
         </LiWrapper>
       </SectionList>
-      <SectionList>
+      <SectionList middle="true">
         <LiWrapper>
           <LiBullet />
           <SectionLi>Cypress</SectionLi>
@@ -120,7 +120,7 @@ export const ShortSection = ({ title }) => (
           <SectionLi>Unit testing</SectionLi>
         </LiWrapper>
       </SectionList>
-      <SectionList>
+      <SectionList bottom="true">
         <LiWrapper>
           <LiBullet />
           <SectionLi>TypeScript</SectionLi>
