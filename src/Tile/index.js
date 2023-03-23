@@ -4,7 +4,7 @@ import {
   Wrapper,
 } from "./styled";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchProjects, selectProjectsStatus } from "../personalHomepageSlice";
+import { fetchProjects, selectProjects, selectProjectsStatus } from "../personalHomepageSlice";
 import { useEffect } from "react";
 import { Content } from "./Content";
 
@@ -12,7 +12,7 @@ export const Tiles = () => {
   const dispatch = useDispatch();
 
   const projectsStatus = useSelector(selectProjectsStatus);
-
+  const projects = useSelector(selectProjects)
   useEffect(() => {
     dispatch(fetchProjects());
   }, [dispatch]);
@@ -26,6 +26,7 @@ export const Tiles = () => {
       </HeaderWrapper>
       <Content 
       status={projectsStatus}
+      projects={projects}
       />
     </Wrapper>
   );
