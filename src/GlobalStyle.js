@@ -11,8 +11,10 @@ html {
 }
 
 body {
+  color: ${({ theme }) => theme === themeLight ? theme.color.black : theme.color.white};
   background-color: ${({ theme }) => theme.color.mercury};
   font-family: 'Inter', sans-serif;
+  letter-spacing: 0.05em;
 }
 `;
 export const Wrapper = styled.div`
