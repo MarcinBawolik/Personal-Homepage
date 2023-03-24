@@ -11,14 +11,16 @@ html {
 }
 
 body {
-  color: ${({ theme }) => theme === themeLight ? theme.color.black : theme.color.white};
+  color: ${({ theme }) =>
+    theme === themeLight ? theme.color.black : theme.color.white};
   background-color: ${({ theme }) => theme.color.mercury};
   font-family: 'Inter', sans-serif;
   letter-spacing: 0.05em;
 }
 `;
 export const Wrapper = styled.div`
-  background-color: ${({ theme }) => (theme === themeLight ? theme.color.whitelilac : theme.color.mineshaft)};
+  background-color: ${({ theme }) =>
+    theme === themeLight ? theme.color.whitelilac : theme.color.mineshaft};
   max-width: 1920px;
   padding-top: 100px;
   padding-bottom: 100px;
