@@ -8,9 +8,11 @@ function PersonalHomepage() {
   return (
     <Wrapper>
       <Informations />
-      <Section title="My skillset includes 🛠️" />
-      <ShortSection title="What i want to learn next 🚀" />
-      <Tiles />
+      <main>
+        <Section title="My skillset includes 🛠️" />
+        <ShortSection title="What i want to learn next 🚀" />
+        <Tiles />
+      </main>
       <Contact />
     </Wrapper>
   );
