@@ -21,6 +21,7 @@ body {
 export const Wrapper = styled.div`
   background-color: ${({ theme }) =>
     theme === themeLight ? theme.color.whitelilac : theme.color.mineshaft};
+  transition: background-color 0.5s;
   max-width: 1920px;
   padding-top: 100px;
   padding-bottom: 100px;
