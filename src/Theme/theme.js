@@ -14,7 +14,6 @@ export const themeLight = {
     black: "#000000",
   },
   breakpoint: {
-    mobileMax: 767,
     iPhoneSE: 375,
   },
 };
