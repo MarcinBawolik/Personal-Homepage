@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import shape from "../../../images/shape.png";
-import { themeLight } from "../../../Theme/theme";
+import { themeLight } from "../../../common/Theme/theme";
 
 export const Wrapper = styled.div`
   max-width: 1216px;

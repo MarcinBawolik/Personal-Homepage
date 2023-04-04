@@ -1,9 +1,9 @@
-import PersonalHomepage from "./features/personalHomepage/PersonalHomepage";
+import PersonalHomepage from "../../features/personalHomepage/PersonalHomepage";
 import { useSelector } from "react-redux";
-import { selectDarkThemeOn } from "./Theme/slice";
+import { selectDarkThemeOn } from "../../common/Theme/slice";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./GlobalStyle";
-import { themeLight, themeDark } from "./Theme/theme";
+import { themeLight, themeDark } from "../../common/Theme/theme";
 
 export const App = () => {
   const darkThemeOn = useSelector(selectDarkThemeOn);

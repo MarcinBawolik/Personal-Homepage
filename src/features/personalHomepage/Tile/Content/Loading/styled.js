@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { themeLight } from "../../../../../Theme/theme";
+import { themeLight } from "../../../../../common/Theme/theme";
 
 export const Wrapper = styled.div`
   margin: 88px auto 148px auto;

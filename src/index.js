@@ -1,9 +1,9 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
-import { App } from "./App";
+import { App } from "./core/App/App";
 import { Provider } from "react-redux";
-import store from "./store";
+import store from "./core/store";
 
 const container = document.getElementById("root");
 const root = createRoot(container);

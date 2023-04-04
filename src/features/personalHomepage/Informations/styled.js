@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { themeLight } from "../../../Theme/theme";
+import { themeLight } from "../../../common/Theme/theme";
 import { ReactComponent as Sun } from "../../../images/sun.svg";
 
 export const Wrapper = styled.nav`

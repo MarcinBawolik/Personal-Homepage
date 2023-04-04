@@ -1,5 +1,5 @@
 import { Contact } from "./Contact";
-import { Wrapper } from "../../GlobalStyle";
+import { Wrapper } from "../../core/App/GlobalStyle";
 import Informations from "./Informations";
 import { Section, ShortSection } from "./Section";
 import { Tiles } from "./Tile";

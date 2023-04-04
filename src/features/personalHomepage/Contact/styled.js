@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { themeLight } from "../../../Theme/theme";
+import { themeLight } from "../../../common/Theme/theme";
 import { ReactComponent as Github } from "../../../images/github.svg";
 import { ReactComponent as Linkedin } from "../../../images/linkedin.svg";
 

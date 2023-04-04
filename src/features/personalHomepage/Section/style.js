@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { themeLight } from "../../../Theme/theme";
+import { themeLight } from "../../../common/Theme/theme";
 
 export const StyledSection = styled.section`
   background-color: ${({ theme }) =>

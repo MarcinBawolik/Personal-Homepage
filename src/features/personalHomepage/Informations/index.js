@@ -18,7 +18,7 @@ import {
 import me from "../../../images/me.jpg";
 import envelope from "../../../images/envelope.svg";
 import { useDispatch, useSelector } from "react-redux";
-import { selectDarkThemeOn, toggleTheme } from "../../../Theme/slice";
+import { selectDarkThemeOn, toggleTheme } from "../../../common/Theme/slice";
 
 const Informations = () => {
   const darkThemeOn = useSelector(selectDarkThemeOn);
