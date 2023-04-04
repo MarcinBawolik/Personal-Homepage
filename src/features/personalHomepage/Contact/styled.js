@@ -50,7 +50,7 @@ export const Paragraph = styled.p`
     `};
 `;
 
-export const ImageWrapper = styled.button`
+export const ImageWrapper = styled.a`
   margin-right: 24px;
   background-color: inherit;
   border: none;

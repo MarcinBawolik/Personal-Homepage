@@ -7,10 +7,6 @@ import {
 } from "./styled";
 
 export const Contact = () => {
-  const openLink = (url) => {
-    window.open(url, "_blank");
-  };
-
   return (
     <Wrapper>
       <Paragraph talk="true">LET'S TALK</Paragraph>
@@ -20,11 +16,10 @@ export const Contact = () => {
         website, dashboard or mobile app in mind and need some help to make your
         ideas come to life, feel free to conatct me
       </Paragraph>
-      <ImageWrapper
-        onClick={() => openLink("https://github.com/MarcinBawolik")}>
+      <ImageWrapper href="https://github.com/MarcinBawolik" target="_blanck">
         <StyledGithub />
       </ImageWrapper>
-      <ImageWrapper onClick={() => openLink("https://pl.linkedin.com/")}>
+      <ImageWrapper href="https://pl.linkedin.com/" target="_blanc">
         {/* dont have account on linkedin yet */}
         <StyledLinkedin />
       </ImageWrapper>
