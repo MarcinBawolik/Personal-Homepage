@@ -1,32 +1,41 @@
 import {
   Tile,
-  Wrapper,
+  Links,
+  LinksRow,
+  LinksValue,
+  List,
   Link,
-  Text,
   Description,
-  Header,
-  LinkAndTextWrapper,
+  Name,
 } from "./styled";
 
 export const Success = ({ projects }) => (
-  <Wrapper>
+  <List>
     {projects.map(({ id, name, description, homepage, html_url }) => (
       <Tile key={id}>
-        <Header>{name}</Header>
+        <Name>{name}</Name>
         <Description>{description}</Description>
-        <LinkAndTextWrapper>
-          <Text>Demo:</Text>
-          <Link target="_blank" rel="noreferrer" href={homepage}>
-            {homepage}
-          </Link>
-        </LinkAndTextWrapper>
-        <LinkAndTextWrapper>
-          <Text>Code:</Text>
-          <Link target="_blank" rel="noreferrer" href={html_url}>
-            {html_url}
-          </Link>
-        </LinkAndTextWrapper>
+        <Links>
+          {!!homepage && (
+            <LinksRow>
+              <dt>Demo:</dt>
+              <LinksValue>
+                <Link target="_blank" rel="noreferrer" href={homepage}>
+                  {homepage}
+                </Link>
+              </LinksValue>
+            </LinksRow>
+          )}
+          <LinksRow>
+            <dt>Code:</dt>
+            <LinksValue>
+              <Link target="_blank" rel="noreferrer" href={html_url}>
+                {html_url}
+              </Link>
+            </LinksValue>
+          </LinksRow>
+        </Links>
       </Tile>
     ))}
-  </Wrapper>
+  </List>
 );

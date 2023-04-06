@@ -1,4 +1,4 @@
-import { HeaderParagraph, HeaderWrapper, Wrapper } from "./styled";
+import { MyRecentProjects, Header, Wrapper, StyledGithubIcon } from "./styled";
 import { useDispatch, useSelector } from "react-redux";
 import {
   fetchProjects,
@@ -7,6 +7,7 @@ import {
 } from "../../../features/personalHomepage/personalHomepageSlice";
 import { useEffect } from "react";
 import { Content } from "./Content";
+import { SubHeader } from "../SubHeader";
 
 export const Tiles = () => {
   const dispatch = useDispatch();
@@ -19,11 +20,11 @@ export const Tiles = () => {
 
   return (
     <Wrapper>
-      <HeaderWrapper>
-        <HeaderParagraph image="true"></HeaderParagraph>
-        <HeaderParagraph title="true">Portfolio</HeaderParagraph>
-        <HeaderParagraph subtitle="true">My recent projects</HeaderParagraph>
-      </HeaderWrapper>
+      <Header>
+        <StyledGithubIcon />
+        <SubHeader>Portfolio</SubHeader>
+        <MyRecentProjects>My recent projects</MyRecentProjects>
+      </Header>
       <Content status={projectsStatus} projects={projects} />
     </Wrapper>
   );

@@ -1,20 +1,28 @@
-import { Contact } from "./Contact";
-import { Wrapper } from "../../core/App/GlobalStyle";
+import { Footer } from "./Footer";
 import Informations from "./Informations";
-import { Section, ShortSection } from "./Section";
+import { nextSkills, skills } from "./Section/skillsData";
 import { Tiles } from "./Tile";
+import { Container } from "./styled";
+import { Skills } from "./Section/index"
 
 function PersonalHomepage() {
   return (
-    <Wrapper>
+    <Container>
       <Informations />
       <main>
-        <Section title="My skillset includes 🛠️" />
-        <ShortSection title="What i want to learn next 🚀" />
+        <Skills 
+         title="My skillset includes 🛠️" 
+         skills={skills} 
+        />
+
+        <Skills 
+         title="What i want to learn next 🚀"
+         skills={nextSkills}
+        />
         <Tiles />
       </main>
-      <Contact />
-    </Wrapper>
+      <Footer />
+    </Container>
   );
 }
 

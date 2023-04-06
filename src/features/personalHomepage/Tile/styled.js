@@ -1,51 +1,30 @@
-import styled, { css } from "styled-components";
-import shape from "../../../images/shape.png";
-import { themeLight } from "../../../common/Theme/theme";
+import styled from "styled-components";
+import { ReactComponent as GithubIcon } from "../../../images/github.svg";
 
 export const Wrapper = styled.div`
-  max-width: 1216px;
-  margin: 0px auto 120px auto;
-  @media (max-width: ${({ theme }) => theme.breakpoint.iPhoneSE}px) {
-    margin-left: 16px;
-    margin-right: 16px;
+  margin-top: 72px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    margin-top: 48px;
   }
 `;
-export const HeaderWrapper = styled.div`
-  display: grid;
-  grid-template-rows: auto auto auto;
-  margin: 0px auto 24px auto;
+
+export const StyledGithubIcon = styled(GithubIcon)`
+  color: ${({ theme }) => theme.colors.primary};
+  margin-bottom: 8px;
 `;
-export const HeaderParagraph = styled.p`
-  ${(props) =>
-    props.image &&
-    css`
-      width: 40px;
-      height: 39.01px;
-      background-image: url("${shape}");
-      margin: 0px auto;
-    `}
-  ${(props) =>
-    props.title &&
-    css`
-      color: ${({ theme }) =>
-        theme === themeLight ? theme.color.black : theme.color.white};
-      font-weight: 900;
-      font-size: 30px;
-      margin: 12.99px auto 8px auto;
-      @media (max-width: ${({ theme }) => theme.breakpoint.iPhoneSE}px) {
-        font-size: 22px;
-      }
-    `}
-${(props) =>
-    props.subtitle &&
-    css`
-      color: ${({ theme }) =>
-        theme === themeLight ? theme.color.mineshaft : theme.color.white};
-      font-weight: 400;
-      font-size: 20px;
-      margin: 0px auto 24px auto;
-      @media (max-width: ${({ theme }) => theme.breakpoint.iPhoneSE}px) {
-        font-size: 17px;
-      }
-    `}
+
+export const Header = styled.header`
+  text-align: center;
+`;
+
+export const MyRecentProjects = styled.h3`
+  color: ${({ theme }) => theme.colors.textPrimary};
+  font-weight: normal;
+  margin-top: 8px;
+  font-size: 20px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    font-size: 17px;
+  }
 `;

@@ -1,22 +1,22 @@
 import styled from "styled-components";
-import { themeLight } from "../../../../../common/Theme/theme";
 
 export const Wrapper = styled.div`
-  margin: 88px auto 148px auto;
+  color: ${({ theme }) => theme.colors.textPrimary};
+  margin-top: 88px;
+  font-size: 20px;
   display: grid;
   align-items: center;
   justify-content: center;
-`;
 
-export const Paragraph = styled.p`
-  color: ${({ theme }) =>
-    theme === themeLight ? theme.color.black : theme.color.white};
-  font-size: 20px;
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    font-size: 17px;
+    margin-top: 32px;
+  }
 `;
 
 export const Spinner = styled.div`
-  border: 16px solid ${({ theme }) => theme.color.iron};
-  border-top: 16px solid ${({ theme }) => theme.color.scienceblue};
+  border: 16px solid ${({ theme }) => theme.colors.spinner.border};
+  border-top: 16px solid ${({ theme }) => theme.colors.spinner.borderTop};
   border-radius: 50%;
   width: 160px;
   height: 160px;
@@ -32,10 +32,10 @@ export const Spinner = styled.div`
     }
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoint.iPhoneSE}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     width: 120px;
     height: 120px;
-    border: 12px solid ${({ theme }) => theme.color.iron};
-    border-top: 12px solid ${({ theme }) => theme.color.scienceblue};
+    border: 12px solid ${({ theme }) => theme.colors.spinner.border};
+    border-top: 12px solid ${({ theme }) => theme.colors.spinner.borderTop};
   }
 `;
